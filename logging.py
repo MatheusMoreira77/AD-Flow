@@ -8,3 +8,6 @@
 #Descrição: Script para automação de criação e gerenciamento de usuários no Active Directory via terminal.
 #=========================================
 #
+
+import logging
+

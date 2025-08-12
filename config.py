@@ -8,3 +8,14 @@
 #Descrição: Script para automação de criação e gerenciamento de usuários no Active Directory via terminal.
 #=========================================
 #
+
+from ldap3 import Server, Connection, ALL
+
+def Conexao_AD():
+    server = Server()
+    conn = Connection(server, auto_bind=True)
+
+    if not conn.bind():
+        print("Erro ao conectar ao servidor LDAP.")
+    else:
+        print("Conexão estabelecida com sucesso.")
